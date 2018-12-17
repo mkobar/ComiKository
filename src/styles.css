@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #222233;
+}
+
+.hoverwell {
+  background-color: #615959;
+  border-radius: 5px;
+  min-width: 500px;
+}
+
+.hoverwell:hover {
+    background-color: #727468;
+    cursor: pointer;
+  }
+
+  .container {
+    padding-top: 10px;
+    padding-left: 200px;
+  }
+
+  .pointable {
+    cursor: pointer;
+  }
+
+  button {
+    color: #555;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+

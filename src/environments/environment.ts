@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appId: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  baseUrl: `https://comicvine.gamespot.com/api/volumes/
+  ?api_key=175d0376cf76c1545407d36174abeef59448a72d&format=json&sort=name:asc&filter=name:`
 };
 
 /*

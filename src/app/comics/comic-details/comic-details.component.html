@@ -1,0 +1,20 @@
+<div class="container">
+  <img [src]="comic?.screen_url" [alt]="comic?.name"
+  class="comic-image">
+
+  <div class="row">
+    <div class="col-md-11">
+          <button id="sidebarToggle" class="btn btn-primary" [routerLink]="['/comics']">
+              <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i>
+          </button>
+      <h2>{{comic?.name}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Start Year:&nbsp;</strong> {{comic?.start_year}}</div>
+      <div><strong>Description:&nbsp;</strong> {{comic?.description}}</div>
+    </div>
+  </div>
+</div>

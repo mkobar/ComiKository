@@ -1,0 +1,34 @@
+.thumbnail {
+  min-height: 280px;
+  padding-left: 10%;
+}
+.pad-left {
+  margin-left: 10px;
+}
+
+.comic-tile {
+  overflow: hidden;
+}
+
+img {
+  float: right;
+  position: relative;
+}
+
+.title{
+  max-width: 300px;
+  min-width: 200px;
+  position: relative;
+  float: left;
+}
+
+#thumb {
+  margin-left: 50px;
+}
+
+.hoverwell {
+  background-color: #615959;
+  border-radius: 5px;
+  min-width: 500px;
+}
+

@@ -1,0 +1,13 @@
+
+<div [routerLink]="['/comics', comic.id]" class="well hoverwell thumbnail">
+  <div class="comic-tile">
+    <h2 class="title">{{comic?.name}}</h2>
+    <img src={{comic?.thumb_url}}/>
+  </div>
+
+  <div>Start Year: {{comic?.start_year}}</div>
+  <div>
+      <span>Description:</span>
+      <span class="pad-left">{{comic?.description}}</span>
+  </div>
+</div>
