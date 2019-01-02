@@ -1,6 +1,6 @@
 #main {
-  padding-left: 3%;
-  padding-right: 3%
+  padding-left: 1%;
+  padding-right: 1%
 }
 
 .span3 {
@@ -8,4 +8,10 @@
 }
 
 
+li {
+  list-style: none;
+}
 
+h1 {
+  color: green;
+}

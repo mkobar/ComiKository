@@ -1,8 +1,11 @@
 header {
-  align-self: auto;
-  padding-left: 5%;
+  align-content: center;
+  padding-left: 1em;
+  padding-top: 5%;
+  padding-bottom: 2%;
   font-size: 80px;
   font-style: oblique;
   color: orangered;
   font-family: Gill Sans;
+  float: center;
 }

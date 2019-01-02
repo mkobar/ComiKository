@@ -1,11 +1,12 @@
-<div id="main">
-  <h1>My Comics</h1>
-  <hr />
-  <div class="row">
-    <div *ngFor="let comic of comics" class="col-md-3">
-      <span class="span3">
-      <app-comics-tile [comic]="comic"></app-comics-tile>
-    </span>
-      </div>
+<div id="main" style="margin-left: 5em; align-items:flex-start">
+  <h1>My Collection</h1>
+  <div class="row" style="padding: 2%;">
+    <ul id="main" class="container-fluid">
+      <li *ngFor="let comic of comics">
+        <span class="span3">
+          <app-comics-tile [comic]=comic></app-comics-tile>
+        </span>
+      </li>
+    </ul>
   </div>
 </div>

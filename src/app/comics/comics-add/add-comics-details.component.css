@@ -10,7 +10,7 @@ img {
   border-color: rgb(238, 100, 66);
   border-width: 1px;
   border-radius: 5px;
-  max-height: 1200px;
+  max-height: 900px;
   width: 875px;
 }
 
@@ -19,10 +19,10 @@ button {
   min-width: 50px;
 }
 
-#delete {
+#save {
   float: right;
   color: white;
-  background: rgb(121, 35, 2);
+  background: green;
 }
 
 #buttonRow {
@@ -49,3 +49,4 @@ p>b {
 #issueTitle {
   color: rgba(243, 247, 10, 0.979)
 }
+

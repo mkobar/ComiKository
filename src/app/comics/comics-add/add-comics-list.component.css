@@ -1,0 +1,27 @@
+/* .form-group { padding-left: 30%; margin-top: 2%; } */
+#searchForm {
+  align-content: center;
+  max-width: 70%;
+  min-width: 70%;
+  margin-top: 2%;
+  margin-left: 15%;
+  margin-right: 20%;
+}
+button.btn {
+  float: right;
+  position: relative;
+}
+label {
+  font-size: 1em;
+}
+
+ul {
+  padding-top: 5%;
+}
+#main {
+  padding-left: 3%;
+  padding-right: 3%
+}
+li {
+  list-style: none;
+}

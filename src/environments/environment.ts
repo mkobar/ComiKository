@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  appId: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-  baseUrl: `https://comicvine.gamespot.com/api/volumes/
-  ?api_key=175d0376cf76c1545407d36174abeef59448a72d&format=json&sort=name:asc&filter=name:`
+  apiKey: `?api_key=175d0376cf76c1545407d36174abeef59448a72d`,
+  baseUrl: `https://comicvine.gamespot.com/api/`,
+  parameters: `&format=json&sort=cover_date:asc&resources=issue&limit=10&query=`
 };
 
 /*

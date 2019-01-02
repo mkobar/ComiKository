@@ -1,0 +1,10 @@
+<input id="searchForm" (keyup)="searchTerm.next($event.target.value)">
+<body>
+  <ul id="main" class="container-fluid pad-left" *ngIf="results">
+    <li class="pad-left row" *ngFor="let result of foundComics | slice:0:9">
+      <span class="span3">
+        <app-add-comics-tile [comic]=result></app-add-comics-tile>
+      </span>
+    </li>
+  </ul>
+</body>

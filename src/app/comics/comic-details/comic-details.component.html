@@ -1,20 +1,20 @@
 <div class="container">
-  <img [src]="comic?.screen_url" [alt]="comic?.name"
-  class="comic-image">
-
-  <div class="row">
-    <div class="col-md-11">
-          <button id="sidebarToggle" class="btn btn-primary" [routerLink]="['/comics']">
-              <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i>
-          </button>
-      <h2>{{comic?.name}} </h2>
-    </div>
+  <div class="col-md-12" id="buttonRow">
+    <img [src]="comic?.image?.screen_url" [alt]="comic?.name" class="comic-image" />
+    <button id="sidebarToggle" class="btn btn-primary" [routerLink]="['/comics']">
+      <b class="fa fa-angle-left"></b><b class="fa fa-angle-left"></b>
+    </button>
+    <form (ngSubmit)="deleteComic()">
+      <button id="delete" class="btn btn-primary"> <b>Delete</b>
+      </button>
+    </form>
   </div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <div><strong>Start Year:&nbsp;</strong> {{comic?.start_year}}</div>
-      <div><strong>Description:&nbsp;</strong> {{comic?.description}}</div>
-    </div>
+  <div class="col-md-12">
+    <h2 id="issueTitle">{{comic?.name}} </h2>
+    <p><b>Volume:&nbsp;</b> {{comic?.volume.name}}</p>
+    <p><b>Date:&nbsp;</b> {{comic?.cover_date}}</p>
+    <p><b>Description:</b></p>
+    <p [innerHtml]="comic?.description" class="pad-left line"></p>
   </div>
 </div>

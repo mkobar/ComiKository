@@ -1,0 +1,15 @@
+<div [routerLink]="['/add', comic.id]" class="well hoverwell thumbnail">
+  <div class="comic-tile">
+    <h2 *ngIf="comic.name" class="title">{{comic?.name}}</h2>
+    <h2 *ngIf="!comic.name" class="title">{{comic?.volume?.name}}</h2>
+    <img src={{comic?.image.thumb_url}} />
+  </div>
+
+  <div *ngIf="comic.cover_date" class="line"><b>Date:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.cover_date | date:'shortDate'}}</div>
+  <div *ngIf="!comic.cover_date && comic.date_added" class="line"><b>Date:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.date_added | date:'shortDate'}}</div>
+  <div class="line"><b>Volume:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.volume?.name}}</div>
+  <div>
+    <span><b>Description:</b>&nbsp;&nbsp;</span>
+    <span [innerHtml]="comic?.description" class="pad-left line"></span>
+  </div>
+</div>

@@ -5,12 +5,9 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ComicListResolver implements Resolve<any> {
-    constructor(private comicsService: ComicsService) {
+  constructor(private comicsService: ComicsService) {}
 
-    }
-
-    resolve() {
-        /*Not a subscription. Returning the observable itself.*/
-        return this.comicsService.getComics().pipe(map(comics => comics));
-    }
+  resolve() {
+    return this.comicsService.getComics().pipe(map(comics => comics));
+  }
 }
