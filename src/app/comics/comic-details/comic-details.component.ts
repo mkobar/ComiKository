@@ -27,6 +27,8 @@ export class ComicDetailsComponent implements OnInit {
 
   private deleteComic() {
     this.comicsService.deleteComic(this.comic.id);
-    this.router.navigate(['/comics']);
+    setTimeout(() => {
+      this.router.navigate(['/comics']);
+    }, 100);
   }
 }
