@@ -22,13 +22,13 @@ export class AddComicsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.comicsSearchService.getIssues(this.searchTerm).subscribe(res => {
-      this.results = res.results;
-      this.foundComics = res.results.map(x => x);
+    this.comicsSearchService.getIssues(this.searchTerm).subscribe((comics: IComic[]) => {
+      this.results = comics.results;
+      this.foundComics = this.results;
     });
   }
 
-  public doSearch(searchTerm: string) {
+  public doSearch(searchTerm: Subject<string> ) {
     this.comicsSearchService
       .getIssues(searchTerm)
       .subscribe((comics: IComic[]) => {
