@@ -19,7 +19,6 @@ import {
 import { AppComponent } from './comics-app.component';
 import { appRoutes } from './routes';
 import { NavBarComponent } from './nav/navbar.component';
-import { ComicsSearchService } from './comics/shared/comics-search.service';
 import { FormsModule } from '@angular/forms';
 import { AddComicDetailsResolver } from './comics/comics-add/add-comics-details-resolver.service';
 import { AddComicService } from './comics/shared/comics-add-comic.service';
@@ -46,7 +45,6 @@ import { AddComicService } from './comics/shared/comics-add-comic.service';
     ComicsService,
     ComicDetailsResolver,
     ComicListResolver,
-    ComicsSearchService,
     AddComicService,
     AddComicDetailsResolver
   ],

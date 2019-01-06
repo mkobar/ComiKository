@@ -2,12 +2,6 @@ body {
   background-color: #222233;
 }
 
-.hoverwell {
-  background-color: #615959;
-  border-radius: 5px;
-  min-width: 500px;
-}
-
 .hoverwell:hover {
     background-color: #727468;
     cursor: pointer;

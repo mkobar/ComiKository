@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IComic } from './comics.model';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

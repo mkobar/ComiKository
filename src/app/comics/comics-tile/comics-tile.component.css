@@ -1,14 +1,10 @@
-.thumbnail {
-  padding-left: 1%;
-}
-
 .pad-left {
   margin-left: 10px;
 }
 
-.comic-tile {
+.comic-tile-header {
   overflow: hidden;
-  color: rgba(243, 247, 10, 0.979)
+  color: rgba(243, 247, 10, 0.979);
 }
 
 img {
@@ -16,8 +12,8 @@ img {
   position: relative;
 }
 
-.title{
-  max-width: 400px;
+.title {
+  max-width: 10em;
   min-width: 100px;
   position: relative;
   float: left;
@@ -26,12 +22,16 @@ img {
 .hoverwell {
   background-color: #615959;
   border-radius: 5px;
-  min-width: 300px;
-  max-width: 700px;
-  min-height: 300px;
+  min-width: 10em;
+  max-width: 35em;
+  min-height: 15em;
+  max-height: 25em;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
+
 .line {
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   color: rgb(214, 228, 214);
 }
 
@@ -39,3 +39,26 @@ b {
   color: chocolate
 }
 
+#descrText {
+  margin-top: 5px;
+  max-height: 5em;
+  min-height: 3em;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: wrap;
+  overflow-wrap: break-word;
+}
+
+#comic-tile-details {
+  margin-bottom: 50px;
+  max-height: 10em;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+#pad {
+  text-align: right;
+  margin-bottom: 2px;
+}

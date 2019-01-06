@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ComicsSearchService } from '../shared/comics-search.service';
 import { FormControl } from '@angular/forms';
 import { IComic } from '../shared/comics.model';
 import { Subject } from 'rxjs';
+import { ComicsService } from '../shared/comics-library.service';
 
 @Component({
   selector: 'app-add-comics',
@@ -17,22 +17,15 @@ export class AddComicsComponent implements OnInit {
   results: Array<any>;
   searchTerm = new Subject<string>();
 
-  constructor(
-    private comicsSearchService: ComicsSearchService
-  ) {}
+  constructor(private comicsService: ComicsService) {}
 
   ngOnInit() {
-    this.comicsSearchService.getIssues(this.searchTerm).subscribe((comics: IComic[]) => {
-      this.results = comics.results;
-      this.foundComics = this.results;
-    });
-  }
-
-  public doSearch(searchTerm: Subject<string> ) {
-    this.comicsSearchService
-      .getIssues(searchTerm)
+    console.log('add-comics-list, ngOnInit');
+    this.comicsService
+      .getIssues(this.searchTerm)
       .subscribe((comics: IComic[]) => {
-        this.foundComics = comics;
+        this.results = comics;
+        this.foundComics = this.results;
       });
   }
 }

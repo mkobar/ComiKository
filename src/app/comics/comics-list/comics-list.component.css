@@ -3,13 +3,14 @@
   padding-right: 1%
 }
 
-.span3 {
+/* .span3 {
   padding: 1%;
-}
+} */
 
 
 li {
   list-style: none;
+  margin: 2em;
 }
 
 h1 {

@@ -3,15 +3,20 @@ import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IComic } from './comics.model';
 import { catchError } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
+import { distinctUntilChanged } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ComicsService {
   constructor(private http: HttpClient) {}
 
   public deleteComic(id: number) {
-    this.http.delete('/lib/comics/' + id)
-    .pipe(catchError(this.handleError<IComic[]>('getComics'[1])))
-    .subscribe();
+    this.http
+      .delete('/lib/comics/' + id)
+      .pipe(catchError(this.handleError<IComic[]>('getComics'[1])))
+      .subscribe();
   }
 
   public getComics(): Observable<IComic[]> {
@@ -26,11 +31,27 @@ export class ComicsService {
       .pipe(catchError(this.handleError<IComic>('getComic')));
   }
 
-  saveComic(comic) {
+  public saveComic(comic) {
     console.log('saveEvent start');
-    const options = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
-    return this.http.post<IComic>('/lib/comics/', comic, options)
+    const options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http
+      .post<IComic>('/lib/comics/', comic, options)
       .pipe(catchError(this.handleError<IComic>('saveEvent')));
+  }
+
+  public getIssues(terms: Observable<string>) {
+    return terms.pipe(
+      debounceTime(100),
+      distinctUntilChanged(),
+      switchMap(term => this.searchEntries(term))
+    );
+  }
+
+  private searchEntries(term) {
+    console.log('term: ' + term);
+    return this.http.get('/lib/add/' + term).pipe(map(res => res));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
