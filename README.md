@@ -1,27 +1,21 @@
-# ComiKository
+# Khan's ComiKository
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+Search Comic Vine's list of comic issues and save them to your comics collection.
 
-## Development server
+## Development Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:5000/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Backend API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The code for this project's backend is contained in the comics-express-server repository. You do not need to clone that repository, however. The application is pre-configured to use the Heroku hosted instance of the comics-express-server.
 
-## Build
+Should you wish to run the backend API locally, you must change the baseUrl variable in environment.ts to `localhost:[your port number]`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Known Issues
 
-## Running unit tests
+This project has several unresolved issues. See the Issues tab for details.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Heroku Free Tier
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Heroku applications hosted via a free tier plan will sleep after 30 minutes (and somethimes more often). This may cause intermittant unresponsiveness while the backend API server wakes from sleep.
