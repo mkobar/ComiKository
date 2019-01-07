@@ -14,7 +14,7 @@ Should you wish to run the backend API locally, you must change the baseUrl vari
 
 ## Known Issues
 
-This project has several unresolved issues. See the Issues tab for details.
+This project has several unresolved issues. See the [Issues](https://github.com/mambotango3000/ComiKository/issues) tab for details.
 
 ## Heroku Free Tier
 
