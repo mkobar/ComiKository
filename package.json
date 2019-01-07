@@ -24,11 +24,11 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "jquery": "3.3.1",
-    "ngf-bootstrap": "0.0.5",
+    "ngx-pagination": "^3.2.1",
     "node-gyp": "^3.8.0",
+    "popper.js": "^1.14.6",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "webpack-dev-server": "3.1.14",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -50,6 +50,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "webpack-dev-server": "^3.1.14"
   }
 }

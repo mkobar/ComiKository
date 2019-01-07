@@ -6,22 +6,55 @@
   margin-top: 2%;
   margin-left: 15%;
   margin-right: 20%;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  height: 2em;
+  background: #daeef1;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
 }
-button.btn {
-  float: right;
-  position: relative;
+
+input {
+  text-align: center;
+  cursor: text;
 }
+
+
+h1 {
+  color: rgb(166, 180, 166);
+  font-size: 30px;
+  font-family: Arial;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 label {
   font-size: 1em;
 }
 
-ul {
-  padding-top: 5%;
-}
 #main {
-  padding-left: 3%;
-  padding-right: 3%
+  align-content: center;
+  margin-left: 2em;
+  margin-right: 2em;
 }
+
+ul {
+  align-content: center;
+}
+
 li {
   list-style: none;
+  margin: 1.5em;
 }
+
+.paging {
+  align-items: center;
+  background-position-y: bottom;
+  background: #615959;
+  margin: auto;
+  max-width: 30%;
+  border-radius: 5px;
+}
+

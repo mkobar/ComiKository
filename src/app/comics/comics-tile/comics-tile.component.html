@@ -1,18 +1,23 @@
 <div [routerLink]="['/comics', comic.id]" class="well hoverwell thumbnail">
 
-  <div class="comic-tile-header">
-    <h2 *ngIf="comic.name" class="title">{{comic?.name}}</h2>
-    <h2 *ngIf="!comic.name" class="title">{{comic?.volume?.name}}</h2>
-    <img src={{comic?.image.thumb_url}} />
-  </div>
+  <div class="tile-content">
+    <div class="comic-tile-header">
+      <div class="title-container">
+        <h2 *ngIf="comic.name" class="title">{{comic?.name}}</h2>
+        <h2 *ngIf="!comic.name" class="title">{{comic?.volume?.name}}</h2>
+      </div>
+      <div>
+        <img src={{comic?.image.thumb_url}} />
+      </div>
+    </div>
 
-  <div id="comic-tile-details">
-    <div class="line"><b>Date:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.cover_date}}</div>
-    <div class="line"><b>Volume:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.volume.name}}</div>
-    <div id="description">
-      <span><b>Description:</b>&nbsp;&nbsp;</span>
-      <p id="descrText" [innerHtml]="comic?.description"></p>
-      <p id="pad">. . .</p>
+    <div id="comic-tile-details">
+      <div class="line"><b>Date:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.cover_date}}</div>
+      <div class="line"><b>Volume:</b>&nbsp;&nbsp;&nbsp;&nbsp;{{comic?.volume.name}}</div>
+      <div id="description">
+        <span><b>Description:</b>&nbsp;&nbsp;</span>
+        <p id="descrText" [innerHtml]="comic?.description"></p>
+      </div>
     </div>
   </div>
 </div>

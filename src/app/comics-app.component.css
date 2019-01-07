@@ -1,6 +1,9 @@
+.container {
+  align-items: center;
+}
+
 header {
-  align-content: center;
-  padding-left: 1em;
+  text-align: center;
   padding-top: 5%;
   padding-bottom: 2%;
   font-size: 80px;
@@ -9,3 +12,4 @@ header {
   font-family: Gill Sans;
   float: center;
 }
+

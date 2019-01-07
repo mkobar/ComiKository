@@ -1,12 +1,15 @@
-<div id="main" style="margin-left: 5em; align-items:flex-start">
+<div id="main" class="col-md12">
   <h1>My Collection</h1>
-  <div class="row" style="padding: 2%;">
-    <ul id="main" class="container-fluid">
-      <li *ngFor="let comic of comics">
-        <span class="span3">
+  <div>
+    <ul id="main" class="container-fluid row">
+      <li *ngFor="let comic of comics | paginate: { id: 'list', itemsPerPage: 10, currentPage: p }">
+        <div class="col-md4">
           <app-comics-tile [comic]=comic></app-comics-tile>
-        </span>
+        </div>
       </li>
     </ul>
   </div>
+</div>
+<div class="paging">
+  <pagination-controls autoHide="true" (pageChange)="p = $event" id="list" ></pagination-controls>
 </div>

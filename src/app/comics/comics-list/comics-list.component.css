@@ -1,18 +1,32 @@
 #main {
-  padding-left: 1%;
-  padding-right: 1%
+  align-content: center;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
-/* .span3 {
-  padding: 1%;
-} */
-
+ul {
+  align-content: center;
+}
 
 li {
   list-style: none;
-  margin: 2em;
+  margin: 1.5em;
 }
 
 h1 {
-  color: green;
+  color: rgb(166, 180, 166);
+  font-size: 30px;
+  font-family: Arial;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.paging {
+  align-items: center;
+  background-position-y: bottom;
+  background: #615959;
+  margin: auto;
+  max-width: 30%;
+  border-radius: 5px;
 }

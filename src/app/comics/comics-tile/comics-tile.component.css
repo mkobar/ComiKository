@@ -13,8 +13,6 @@ img {
 }
 
 .title {
-  max-width: 10em;
-  min-width: 100px;
   position: relative;
   float: left;
 }
@@ -22,9 +20,9 @@ img {
 .hoverwell {
   background-color: #615959;
   border-radius: 5px;
-  min-width: 10em;
-  max-width: 35em;
-  min-height: 15em;
+  min-width: 27em;
+  max-width: 27em;
+  min-height: 25em;
   max-height: 25em;
   overflow: hidden;
   padding-bottom: 10px;
@@ -32,7 +30,7 @@ img {
 
 .line {
   margin-bottom: 5px;
-  color: rgb(214, 228, 214);
+  color: rgb(201, 235, 201);
 }
 
 b {
@@ -41,24 +39,27 @@ b {
 
 #descrText {
   margin-top: 5px;
-  max-height: 5em;
-  min-height: 3em;
+  max-height: 6em;
+  min-height: 6em;
   font-size: 15px;
   overflow: hidden;
   white-space: wrap;
   overflow-wrap: break-word;
-}
-
-#comic-tile-details {
-  margin-bottom: 50px;
-  max-height: 10em;
+  color: rgb(201, 235, 201);
 }
 
 p {
   margin-bottom: 5px;
 }
 
-#pad {
-  text-align: right;
-  margin-bottom: 2px;
+.tile-content {
+  padding: 1em;
+}
+
+.title-container {
+  width: 17em;
+}
+.img-container {
+  width: 1em;
+  position: fixed;
 }

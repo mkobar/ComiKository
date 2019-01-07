@@ -1,8 +1,16 @@
-.navbar.navbar-default {
+.navbar {
   margin-left: 3%;
   margin-right: 3%;
   background-color: #615959;
   border-radius: 5px;
+}
+
+.navbar-expand-lg {
+  background-color: #615959;
+}
+
+.navbar-collapse {
+  background-color: #615959;
 }
 
 .container-fluid {
@@ -11,6 +19,10 @@
 }
 
 .nav.navbar-nav {
+  font-size: 20px;
+}
+
+.nav.navbar-text {
   font-size: 20px;
 }
 
@@ -26,4 +38,9 @@
 
 li > a.active {
   color: #f97924;
+}
+
+.nav-link {
+  color: azure;
+  font-size: 20px;
 }

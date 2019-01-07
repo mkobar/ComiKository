@@ -1,10 +1,17 @@
+<h1>Find Comics</h1>
 <input id="searchForm" (keyup)="searchTerm.next($event.target.value)">
-<body>
-  <ul id="main" class="container-fluid pad-left" *ngIf="results">
-    <li class="pad-left row" *ngFor="let result of foundComics | slice:0:19">
-      <span class="span3">
-        <app-add-comics-tile [comic]=result></app-add-comics-tile>
-      </span>
-    </li>
-  </ul>
-</body>
+<div id="main" class="col-md12">
+  <div>
+    <ul id="main" class="container-fluid row">
+      <li *ngFor="let comic of foundComics | paginate: { id: 'add', itemsPerPage: 20, currentPage: p }">
+        <div class="col-md4">
+          <app-add-comics-tile [comic]=comic></app-add-comics-tile>
+        </div>
+      </li>
+    </ul>
+    <div class="paging">
+      <pagination-controls autoHide="true" (pageChange)="p = $event" id="add"></pagination-controls>
+    </div>
+  </div>
+</div>
+

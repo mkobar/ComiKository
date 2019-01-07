@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-12" id="buttonRow">
       <img [src]="comic?.image?.screen_url" [alt]="comic?.name" class="comic-image" />
-      <button id="sidebarToggle" class="btn btn-primary" [routerLink]="['/comics']">
+      <button id="sidebarToggle" class="btn btn-primary" [routerLink]="['/add']">
         <b class="fa fa-angle-left"></b><b class="fa fa-angle-left"></b>
       </button>
       <form (ngSubmit)="saveComic()">
