@@ -7,6 +7,7 @@ import { debounceTime } from 'rxjs/operators';
 import { distinctUntilChanged } from 'rxjs/operators';
 import { switchMap } from 'rxjs/operators';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class ComicsService {
@@ -14,20 +15,20 @@ export class ComicsService {
 
   public deleteComic(id: number) {
     this.http
-      .delete('/lib/comics/' + id)
+      .delete(`${environment.baseUrl}/lib/comics/` + id)
       .pipe(catchError(this.handleError<IComic[]>('getComics'[1])))
       .subscribe();
   }
 
   public getComics(): Observable<IComic[]> {
     return this.http
-      .get<IComic[]>('/lib/comics')
+      .get<IComic[]>(`${environment.baseUrl}/lib/comics`)
       .pipe(catchError(this.handleError<IComic[]>('getComics'[1])));
   }
 
   public getComic(id: number): Observable<IComic> {
     return this.http
-      .get<IComic>('/lib/comics/' + id)
+      .get<IComic>(`${environment.baseUrl}/lib/comics/` + id)
       .pipe(catchError(this.handleError<IComic>('getComic')));
   }
 
@@ -37,7 +38,7 @@ export class ComicsService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
     return this.http
-      .post<IComic>('/lib/comics/', comic, options)
+      .post<IComic>(`${environment.baseUrl}/lib/comics/`, comic, options)
       .pipe(catchError(this.handleError<IComic>('saveEvent')));
   }
 
@@ -51,7 +52,7 @@ export class ComicsService {
 
   private searchEntries(term) {
     console.log('term: ' + term);
-    return this.http.get('/lib/add/' + term).pipe(map(res => res));
+    return this.http.get(`${environment.baseUrl}/lib/add/` + term).pipe(map(res => res));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
