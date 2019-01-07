@@ -8,7 +8,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:5000/`. The app 
 
 ## Backend API
 
-The code for this project's backend is contained in the [comics-express-server](https://github.com/mambotango3000/quotesApp_Express) repository. You do not need to clone that repository, however. The application is pre-configured to use a Heroku hosted instance of athe comics-express-server.
+The code for this project's backend is contained in the [comics-express-server](https://github.com/mambotango3000/comics-express-server) repository. You do not need to clone that repository, however. The application is pre-configured to use a Heroku hosted instance of athe comics-express-server.
 
 Should you wish to run the backend API locally, you must change the baseUrl variable in environment.ts to `localhost:[your port number]`.
 
