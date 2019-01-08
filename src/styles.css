@@ -3,19 +3,19 @@ body {
 }
 
 .hoverwell:hover {
-    background-color: #727468;
-    cursor: pointer;
-  }
+  background-color: #727468;
+  cursor: pointer;
+}
 
-  .container {
-    padding-top: 10px;
-    padding-left: 5%;
-  }
+.container {
+  padding-top: 10px;
+  padding-left: 5%;
+}
 
-  .pointable {
-    cursor: pointer;
-  }
+.pointable {
+  cursor: pointer;
+}
 
-  button {
-    color: #555;
-  }
+button {
+  color: #555;
+}

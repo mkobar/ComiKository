@@ -10,7 +10,7 @@ import { AddComicService } from '../shared/comics-add-comic.service';
 @Component({
   selector: 'app-add-comics-tile',
   templateUrl: './add-comics-tile.component.html',
-  styleUrls: ['./add-comics-tile.component.css', '../../../styles.css']
+  styleUrls: ['./add-comics-tile.component.css', '../../../Styles.css']
 })
 export class AddComicsTileComponent implements OnInit {
   @Input() comic: IComic;
