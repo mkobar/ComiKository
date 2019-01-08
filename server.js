@@ -25,7 +25,7 @@ app.use(forceSSL());
 
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/'));
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
