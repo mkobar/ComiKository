@@ -31,7 +31,7 @@ app.use(express.static('/'));
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
   console.log(__dirname);
-  res.sendFile(path.join(__dirname + '/src/app/comics/index.html'));
+  res.sendFile(path.join(__dirname + '/src/app/comics'));
 });
 
 
