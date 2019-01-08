@@ -18,4 +18,4 @@ This project has several unresolved issues. See the [Issues](https://github.com/
 
 ## Heroku Free Tier
 
-Heroku applications hosted via a free tier plan will sleep after 30 minutes (and somethimes more often). This may cause intermittent unresponsiveness while the backend API server wakes from sleep.
+Heroku applications hosted via a free tier plan will sleep after 30 minutes (and somethimes more often). This may cause intermittant unresponsiveness while the backend API server wakes from sleep.
