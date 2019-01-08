@@ -30,8 +30,7 @@ app.use(express.static('/'));
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
-  console.log(__dirname);
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join('comics'));
 });
 
 
