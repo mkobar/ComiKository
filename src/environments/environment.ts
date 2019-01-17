@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: `https://lit-escarpment-22972.herokuapp.com`,
+  baseUrl: `https://lit-escarpment-22972.herokuapp.com`
 };
 
 /*

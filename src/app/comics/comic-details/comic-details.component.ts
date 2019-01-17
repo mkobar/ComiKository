@@ -12,6 +12,7 @@ import { ComicsService } from '../shared/comics-library.service';
 })
 export class ComicDetailsComponent implements OnInit {
   comic: IComic;
+  p: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,7 +26,7 @@ export class ComicDetailsComponent implements OnInit {
     });
   }
 
-  private deleteComic() {
+  public deleteComic() {
     this.comicsService.deleteComic(this.comic.id);
     setTimeout(() => {
       this.router.navigate(['/comics']);

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: `https://lit-escarpment-22972.herokuapp.com`
 };

@@ -14,6 +14,7 @@ export class AddComicsComponent implements OnInit, OnChanges {
   search = new FormControl('', undefined);
   foundComics: IComic[];
 
+  p: number;
   results: Array<any>;
   searchTerm = new Subject<string>();
 

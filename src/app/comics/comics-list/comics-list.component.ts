@@ -10,6 +10,7 @@ import { ComicsService } from '../shared/comics-library.service';
 })
 export class ComicsListComponent implements OnInit {
   comics: IComic[];
+  p: number;
 
   constructor(private route: ActivatedRoute, private comicsService: ComicsService) {}
 
