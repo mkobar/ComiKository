@@ -1,0 +1,21 @@
+body {
+    background-color: #222233;
+  }
+  
+  .hoverwell:hover {
+    background-color: #727468;
+    cursor: pointer;
+  }
+  
+  .container {
+    padding-top: 10px;
+    padding-left: 5%;
+  }
+  
+  .pointable {
+    cursor: pointer;
+  }
+  
+  button {
+    color: #555;
+  }
